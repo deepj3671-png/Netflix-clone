@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 100;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+}
+
+.nav_logo {
+    width: 100px;
+}
+
+.nav_button {
+    background-color: #e50914;
+    color: white;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    height: 80vh;
+    background-image: url("https://images.alphacoders.com/691/691831.jpg");
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.banner_contents {
+    margin-left: 40px;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.banner_title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.banner_description {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+
+.banner_button {
+    background-color: rgba(51, 51, 51, 0.7);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.banner_button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.banner_fadeBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+/* Movie Rows */
+.row {
+    margin: 20px 0 20px 20px;
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none; /* સ્ક્રોલબાર છુપાવવા */
+}
+
+.row_poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.row_posterLarge {
+    max-height: 250px;
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.09);
+}
